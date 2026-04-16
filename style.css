@@ -1,0 +1,421 @@
+@font-face {
+    font-family: "Zpix";
+    src: url("fonts/zpix.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    min-width: 1080px;
+    min-height: 670px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-width: 1280px;
+    min-height: 720px;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    width: 130%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    pointer-events: none;
+    min-width: 1280px;
+    min-height: 720px;
+    animation: slideBackground 60s linear infinite;
+}
+
+@keyframes slideBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.top-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 42.04%;
+    min-height: 302.7px;
+}
+
+.maxtitle-image {
+    position: absolute;
+    width: 980.327px;
+    height: 148.434px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -5.28px;
+    margin-top: -8.87px;
+    object-fit: contain;
+}
+
+.minititle-image {
+    position: absolute;
+    width: 390.26px;
+    height: 164.004px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 319.89px;
+    margin-top: 35.7px;
+    object-fit: cover;
+}
+
+.left-section {
+    position: absolute;
+    top: 42.04%;
+    left: 0;
+    width: 26.67%;
+    min-width: 341.401px;
+    height: 48.79%;
+    min-height: 351.3px;
+}
+
+.info-image {
+    position: absolute;
+    width: 79.381px;
+    height: 77.444px;
+    right: 246.53px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 125.27px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.wechat-image {
+    position: absolute;
+    width: 234.915px;
+    height: 77.444px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 125.27px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #d4d4d4, #c8c8c8);
+    border: 2px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.wechat-avatar {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin: 0 6px;
+    border: 2px solid #444;
+    flex-shrink: 0;
+}
+
+.wechat-text {
+    font-family: "Zpix", monospace;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    letter-spacing: 2px;
+    padding-right: 10px;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+}
+
+.qrcode-popup {
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    margin-top: 70px;
+    z-index: 1000;
+}
+
+.qrcode-image {
+    width: 234.915px;
+    height: 234.915px;
+    object-fit: contain;
+}
+
+.right-section {
+    position: absolute;
+    top: 42.04%;
+    right: -0.11px;
+    width: 25.71%;
+    min-width: 329.139px;
+    height: 48.79%;
+    min-height: 351.3px;
+}
+
+.xingxiang-section {
+    position: absolute;
+    width: 141.336px;
+    height: 285.899px;
+    left: 54.21px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -76.41px;
+}
+
+.name-image {
+    position: absolute;
+    width: 141.336px;
+    height: 49.694px;
+    left: 40px;
+    top: 0;
+    object-fit: cover;
+}
+
+.name-text {
+    position: absolute;
+    left: 101px;
+    transform: translateX(-50%);
+    top: 8px;
+    white-space: nowrap;
+    font-family: "Zpix", monospace;
+    font-size: 30px;
+    color: #3a3a3a;
+    letter-spacing: 6px;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    z-index: 10;
+}
+
+.role-image {
+    position: absolute;
+    width: auto;
+    height: 236.675px;
+    left: -30px;
+    top: 53.57px;
+    object-fit: contain;
+}
+
+.email-image {
+    position: absolute;
+    width: 249.758px;
+    height: 77.444px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 125.27px;
+    object-fit: cover;
+}
+
+.bottom-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 9.17%;
+    min-height: 66px;
+    z-index: 50;
+}
+
+.site-url-bar {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    padding: 4px 10px 6px 8px;
+    background: rgba(0, 0, 0, 0.55);
+    border: none;
+    border-radius: 0;
+    image-rendering: pixelated;
+}
+
+.site-url-text {
+    display: inline-block;
+    font-family: "Zpix", monospace;
+    font-size: 24px;
+    line-height: 1.1;
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-transform: lowercase;
+    text-shadow: none;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.zuuoxia-image {
+    position: absolute;
+    width: 193.611px;
+    height: 40.658px;
+    left: 15.49px;
+    top: 7.74px;
+    object-fit: cover;
+}
+
+.youxia-image {
+    position: absolute;
+    width: 125.847px;
+    height: 40.658px;
+    right: 15.38px;
+    top: 7.74px;
+    object-fit: cover;
+}
+
+.center-section {
+    position: absolute;
+    top: 42.05%;
+    bottom: 9.17%;
+    left: 26.67%;
+    right: 25.71%;
+    min-width: 609.57px;
+    min-height: 351.3px;
+}
+
+.list-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: 84.54px;
+    right: 96.81px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -1.56px;
+}
+
+.list-item {
+    position: relative;
+    width: 100%;
+    height: 79px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.list-item:hover {
+    transform: scale(1.05);
+}
+
+.list-item.clicked {
+    transform: scale(0.7);
+    transition: transform 0.1s ease;
+}
+
+.list-item-L {
+    position: absolute;
+    height: 79px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.list-item-C {
+    position: absolute;
+    height: 79px;
+    left: 8px;
+    right: 8.22px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: repeat;
+    background-size: 7.80247px 79px;
+    background-position: top left;
+}
+
+.list-item:nth-child(3) .list-item-C {
+    background-size: 7.8024px 79.9746px;
+}
+
+.list-item-R {
+    position: absolute;
+    height: 79px;
+    right: 0.22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.list-item-image {
+    position: absolute;
+    height: 58.333px;
+    width: 130px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -0.11px;
+    margin-top: -0.33px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.jianli-image {
+    width: 65px;
+}
+
+.list-item-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Zpix", monospace;
+    font-size: 36px;
+    font-weight: normal;
+    color: #3d3d3d;
+    letter-spacing: 3px;
+    pointer-events: none;
+    text-shadow: 3px 3px 0 #2a2a2a;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+}
+
+.list-item * {
+    pointer-events: none;
+}
+
+/* Pixel Cat - image sprite, zigzags across all 4 list bars */
+.pixel-cat {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    z-index: 100;
+    width: 80px;
+    height: auto;
+    animation: catZigzag 20s linear infinite;
+    image-rendering: pixelated;
+    pointer-events: none;
+}
+
+@keyframes catZigzag {
+    0%      { left: 0;                    top: -60px; transform: scaleX(-1); }
+    12%     { left: calc(100% - 80px);    top: -60px; transform: scaleX(-1); }
+    12.01%  { left: calc(100% - 80px);    top: 35px;  transform: scaleX(1); }
+    25%     { left: 0;                    top: 35px;  transform: scaleX(1); }
+    25.01%  { left: 0;                    top: 130px; transform: scaleX(-1); }
+    37.5%   { left: calc(100% - 80px);    top: 130px; transform: scaleX(-1); }
+    37.51%  { left: calc(100% - 80px);    top: 225px; transform: scaleX(1); }
+    50%     { left: 0;                    top: 225px; transform: scaleX(1); }
+    50.01%  { left: 0;                    top: 225px; transform: scaleX(-1); }
+    62.5%   { left: calc(100% - 80px);    top: 225px; transform: scaleX(-1); }
+    62.51%  { left: calc(100% - 80px);    top: 130px; transform: scaleX(1); }
+    75%     { left: 0;                    top: 130px; transform: scaleX(1); }
+    75.01%  { left: 0;                    top: 35px;  transform: scaleX(-1); }
+    87.5%   { left: calc(100% - 80px);    top: 35px;  transform: scaleX(-1); }
+    87.51%  { left: calc(100% - 80px);    top: -60px; transform: scaleX(1); }
+    100%    { left: 0;                    top: -60px; transform: scaleX(1); }
+}

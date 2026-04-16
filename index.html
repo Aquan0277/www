@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/Home.png" alt="" class="background-image">
+        <div class="top-section">
+            <img src="images/maxtitle.png" alt="" class="maxtitle-image">
+            <!-- minititle placeholder -->
+        </div>
+        <div class="left-section">
+            <img src="images/info.png" alt="" class="info-image" id="info-img">
+            <div class="wechat-image" id="wechat-btn">
+                <img src="images/avatar.png" alt="" class="wechat-avatar">
+                <span class="wechat-text">加个微信</span>
+            </div>
+            <div id="wechat-qrcode-popup" class="qrcode-popup">
+                <img src="images/wechatcode.png" alt="" class="qrcode-image">
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="xingxiang-section">
+                <img src="images/name.png" alt="" class="name-image">
+                <img src="images/role.png" alt="" class="role-image">
+            </div>
+            <img src="images/email.png" alt="" class="email-image">
+        </div>
+        <div class="bottom-section">
+            <div class="site-url-bar"><span class="site-url-text">liudequan.com</span></div>
+            <!-- zuuoxia placeholder -->
+            <img src="images/youxia.png" alt="" class="youxia-image">
+        </div>
+        <div class="center-section">
+            <div class="list-section">
+                <img src="images/minecraft_cat.png?v=2" alt="" class="pixel-cat">
+                <div class="list-item">
+                    <img src="images/L.png" alt="" class="list-item-L">
+                    <div class="list-item-C" style="background-image: url('images/C.png');"></div>
+                    <img src="images/R.png" alt="" class="list-item-R">
+                    <img src="images/jianli1.png" alt="" class="list-item-image jianli-image">
+                </div>
+                <div class="list-item">
+                    <img src="images/L.png" alt="" class="list-item-L">
+                    <div class="list-item-C" style="background-image: url('images/C.png');"></div>
+                    <img src="images/R.png" alt="" class="list-item-R">
+                </div>
+                <div class="list-item">
+                    <img src="images/zL.png" alt="" class="list-item-L">
+                    <div class="list-item-C" style="background-image: url('images/zC.png');"></div>
+                    <img src="images/zR.png" alt="" class="list-item-R">
+                </div>
+                <div class="list-item">
+                    <img src="images/L.png" alt="" class="list-item-L">
+                    <div class="list-item-C" style="background-image: url('images/C.png');"></div>
+                    <img src="images/R.png" alt="" class="list-item-R">
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="background-music" loop autoplay>
+        <source src="mp3/Beginning_2.ogg.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        var infoToggled = false;
+
+        function toggleInfo() {
+            var infoImg = document.getElementById('info-img');
+            var audio = document.getElementById('background-music');
+
+            if (infoToggled) {
+                infoImg.src = 'images/info.png';
+                audio.play();
+                infoToggled = false;
+            } else {
+                infoImg.src = 'images/info copy.png';
+                audio.pause();
+                infoToggled = true;
+            }
+        }
+
+        window.onload = function() {
+            var audio = document.getElementById('background-music');
+            audio.volume = 0.4;
+            audio.play();
+
+            var infoImg = document.getElementById('info-img');
+            if (infoImg) {
+                infoImg.addEventListener('click', toggleInfo);
+            }
+
+            var wechatBtn = document.getElementById('wechat-btn');
+            var qrcodePopup = document.getElementById('wechat-qrcode-popup');
+
+            if (wechatBtn && qrcodePopup) {
+                wechatBtn.addEventListener('mouseenter', function() {
+                    qrcodePopup.style.display = 'block';
+                });
+
+                wechatBtn.addEventListener('mouseleave', function() {
+                    qrcodePopup.style.display = 'none';
+                });
+
+                qrcodePopup.addEventListener('mouseleave', function() {
+                    qrcodePopup.style.display = 'none';
+                });
+            }
+        };
+    </script>
+</body>
+</html>
